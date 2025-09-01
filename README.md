@@ -38,6 +38,25 @@ cd qdb
 pip install -e .
 ```
 
+Примеры использования
+1. Простой запрос
+```python
+from qdb import QDB
+
+db = QDB()
+print(db.query("SELECT * FROM universe WHERE life = TRUE"))
+```
+
+2. Выборка атомов
+```python
+print(db.query("SELECT spin FROM atoms WHERE location = 'Andromeda'"))
+```
+
+3. Агрегация мультивселенных
+```python
+print(db.query("SELECT COUNT(*) FROM multiverse WHERE entropy < 10"))
+```
+
 
 ## Архитектура
 
